@@ -1,7 +1,10 @@
 import React from 'react'
 
 
+
 function Hero() {
+    
+    
   return (
     <div className='flex md:flex-row flex-col w-full'>
         <div className='bg-orange-600 w-auto md:w-1/2 flex items-center justify-center'>

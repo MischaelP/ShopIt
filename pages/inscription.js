@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect, useRef } from 'react'
+import { nanoid } from 'nanoid';
 
 function inscription() {
   const [prenom, setPrenom] = useState("");
@@ -17,7 +18,17 @@ function inscription() {
   const handleSubmit = (event) => {
     event.preventDefault()
     if (checkPassword() == true) {
-      console.log("ok")
+        const newUser = {
+          id : nanoid(8),
+          userPrenom : prenom,
+          userNom : nom,
+          userEmail : email,
+          password : mdp
+        }
+      console.log(newUser)
+    }
+    else {
+      setShowError(true)
     }
   } 
 

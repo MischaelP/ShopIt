@@ -1,0 +1,33 @@
+{
+  "products": [
+    {
+      "title": "Andrew Neel",
+      "price": 14.99,
+      "img": "pexels-andrew-neel-7932264",
+      "picked": false,
+      "id": 1
+    },
+    {
+      "title": "Ksenia-chernaya",
+      "price": 12.99,
+      "img": "pexels-ksenia-chernaya-3952048",
+      "picked": false,
+      "id": 2
+    },
+    {
+      "title": "Maksim Goncharenok",
+      "price": 13.99,
+      "img": "pexels-maksim-goncharenok-4352247",
+      "picked": false,
+      "id": 3
+    },
+    {
+      "title": "Medhat Ayad",
+      "price": 14.99,
+      "img": "pexels-medhat-ayad-447592",
+      "picked": false,
+      "id": 4
+    }
+   
+  ]
+}

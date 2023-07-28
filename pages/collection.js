@@ -3,26 +3,30 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Products from '@/components/shop/Products'
 
-const url ='https://jsonplaceholder.typicode.com/users'
-function collection() {
-  const [users, setUsers] = useState([])
 
-  useEffect( () => {
-    axios.get(url)
-    .then((response) => { setUsers(response.data)})
+function collection(){
 
-  },[])
+  const [data, setData] = useState('');
 
-  console.log(users)
+  useEffect(() => {
+    // Appel de l'API au chargement du composant
+    callAPI();
+  }, []);
+
+  const callAPI = () => {
+    axios.get("http://localhost:3001/testAPI")
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error('Erreur lors de la requête:', error);
+      });
+  };
+
+  
   return (
-    <div>
-    <h1 className='mt-[200px]'>Présentation des collections </h1>
-      <ul>
-        {users.map((user) => 
-          <li key={user.id}>Utilisateur : {user.name}</li>
-          
-        )}
-      </ul>
+     <div>
+        <p className='mt-[200px]'> les infos {console.log(data)}</p>
     </div>
   )
 }
